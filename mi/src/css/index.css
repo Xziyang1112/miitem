@@ -198,6 +198,9 @@
   font-size: 14px;
 }
 
+.category-item:hover .children {
+  display: block;
+}
 .category-item .title {
   position: relative;
   display: block;
@@ -411,6 +414,9 @@
   margin-left: 15px;
   transition: box-shadow .2s linear;
 }
+.main_b_r li:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
 .main_b_r li a {
   display: block;
   height: 170px;
@@ -550,8 +556,17 @@
   bottom: 0;
   z-index: 2;
 }
-.fl_box_bd_r .fl_bd_rlist .rainbow-item {
+.fl_box_bd_r .fl_bd_rlist .rainbow-item1 {
   border-top-color: #ffac13;
+}
+.fl_box_bd_r .fl_bd_rlist .rainbow-item2 {
+  border-top-color: #83c44e;
+}
+.fl_box_bd_r .fl_bd_rlist .rainbow-item3 {
+  border-top-color: #2196f3;
+}
+.fl_box_bd_r .fl_bd_rlist .rainbow-item4 {
+  border-top-color: #e53935;
 }
 
 .fl_bd_rlist .thumb {
@@ -563,6 +578,176 @@
   width: 160px;
   height: 160px;
   margin: 0;
+}
+.fl_bd_rlist .title {
+  margin: 0 20px 3px;
+  font-size: 14px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.fl_bd_rlist .title a {
+  color: #212121;
+}
+.fl_bd_rlist .desc {
+  height: 18px;
+  margin: 0 20px 12px;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #b0b0b0;
+}
+.fl_bd_rlist .price {
+  margin: 0;
+  color: #ff6709;
+}
+.fl_bd_rlist .price del {
+  color: #b0b0b0;
+}
+.fl_bd_rlist .flag-saleoff {
+  background-color: #e53935;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  width: 64px;
+  height: 20px;
+  margin-left: -32px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.fl_ad {
+  margin: 2px 0 42px;
+  overflow: hidden;
+}
+.fl_ad img {
+  width: 1226px;
+}
+
+.phones {
+  padding-top: 22px;
+  background: #f5f5f5;
+}
+.phones .container {
+  height: 686px;
+  margin-bottom: 8px;
+}
+.phones .container .box-hd {
+  position: relative;
+  height: 58px;
+}
+.phones .container .box-hd .title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+  color: #333;
+}
+.phones .container .box-hd .more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.phones .more a {
+  font-size: 16px;
+  line-height: 58px;
+  color: #424242;
+}
+.phones .more a:hover {
+  color: #ff6700;
+}
+.phones .more a:hover i {
+  background: #ff6700;
+}
+.phones .more a i {
+  width: 12px;
+  height: 12px;
+  padding: 4px;
+  margin-left: 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  line-height: 12px;
+  background: #b0b0b0;
+  color: #fff;
+  vertical-align: 1px;
+}
+
+.phones .row {
+  margin-left: -14px;
+}
+.phones .row .box-bd-l {
+  width: 234px;
+  float: left;
+  margin-left: 14px;
+  min-height: 1px;
+}
+.phones .row .box-bd-l .bigphone {
+  margin: 0 0 -14px -14px;
+  height: 614px;
+}
+
+.bigphone .bigphone-item {
+  height: 614px;
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 234px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  background: #fff;
+  transition: all .2s linear;
+}
+.bigphone .bigphone-item:hover {
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
+}
+.bigphone .bigphone-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.bigphone .bigphone-item a img {
+  width: 234px;
+}
+
+.phones .box-bd-r {
+  width: 978px;
+  float: left;
+  margin-left: 14px;
+  min-height: 1px;
+}
+.phones .box-bd-r .box-bd-rlist {
+  margin: 0 0 -14px -14px;
+  width: 992px;
+  height: 614px;
+}
+.phones .box-bd-r .box-bd-rlist .phone-item {
+  height: 260px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 234px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  background: #fff;
+  transition: all .2s linear;
+}
+
+.phones .figure {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 18px;
+}
+.phones .figure a {
+  display: block;
 }
 
 .footer-service {

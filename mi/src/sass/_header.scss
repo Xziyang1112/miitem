@@ -187,6 +187,11 @@
     font-size: 14px;              
     }
 .category-item{
+    &:hover{
+        .children{
+            display: block;
+        }
+    }
     .title{
         position: relative;
         display: block;
@@ -231,6 +236,7 @@
                 color: #333;
                 &:hover{
                     color:#ff6700;
+
                 }
                 .thumb{
                     margin-right: 12px;

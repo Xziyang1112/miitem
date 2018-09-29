@@ -80,6 +80,9 @@
         height: 170px;
         margin-left: 15px;
         transition: box-shadow .2s linear;
+        &:hover{
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
         a{
             display: block;
             height: 170px;

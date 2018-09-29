@@ -128,9 +128,19 @@
                 }
             }
         }
-        .rainbow-item{
+        .rainbow-item1{
             border-top-color: #ffac13;
         }
+        .rainbow-item2{
+            border-top-color: #83c44e;
+        }
+        .rainbow-item3{
+            border-top-color: #2196f3;
+        }
+        .rainbow-item4{
+            border-top-color: #e53935;
+        }
+
     }
 }
 .fl_bd_rlist{
@@ -143,5 +153,55 @@
             height: 160px;
             margin: 0;
         }
+    }
+    .title{
+        margin: 0 20px 3px;
+        font-size: 14px;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        a{
+            color: #212121;
+        }
+    }
+    .desc{
+        height: 18px;
+        margin: 0 20px 12px;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #b0b0b0;
+    }
+    .price{
+        margin: 0;
+        color: #ff6709;
+        del{
+            color: #b0b0b0;
+        }
+    }
+    .flag-saleoff{
+        background-color: #e53935;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 2;
+        width: 64px;
+        height: 20px;
+        margin-left: -32px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: #fff;
+    }
+
+}
+//广告图
+.fl_ad{
+    margin: 2px 0 42px;
+    overflow: hidden;
+    img{
+        width: 1226px;
     }
 }
