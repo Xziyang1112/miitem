@@ -1,0 +1,130 @@
+@charset "utf-8";
+.footer-service{//底部上半部分
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+    li{
+        float: left;
+        width: 19.8%;
+        height: 25px;
+        border-left: 1px solid #e0e0e0;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        a{
+            color: #616161;
+            transition: color .2s;
+            .iconfont{
+                margin-right: 6px;
+                font-size: 24px;
+                line-height: 24px;
+                vertical-align: -4px;
+                
+            }
+        }
+        a:hover{
+            color: #ff6700;
+        }
+    }
+}
+.footer-links{//底部中间
+    padding: 40px 0;
+    dl{
+        float: left;
+        width: 160px;
+        height: 112px;
+        margin: 0;
+        dt{
+            margin: -1px 0 26px;
+            font-size: 14px;
+            line-height: 1.25;
+            color: #424242;
+        }
+        dd{
+            margin: 10px 0 0;
+            font-size: 12px;
+            a{
+                color:#757575;
+            }
+            a:hover{
+                color:#ff6700;
+            }
+        }
+    }
+    .footer_links_r{
+        float: right;
+        width: 251px;
+        height: 112px;
+        border-left: 1px solid #e0e0e0;
+        text-align: center;
+        color: #616161;
+        .phone_num{
+            margin: 0 0 5px;
+            font-size: 22px;
+            line-height: 1;
+            color: #ff6700;
+        }
+        a{
+            display: inline-block;
+            border: 1px solid #ff6700;
+            background: #fff;
+            color: #ff6700;
+            width: 118px;
+            height: 28px;
+            font-size: 12px;
+            line-height: 28px;
+        }
+    }
+}
+.footer_links_r p{
+    margin: 0 0 16px;
+    font-size: 12px;
+}
+
+.footer-info{
+    padding: 30px 0;
+    font-size: 12px;
+    background: #fafafa;
+    .footer_logo{
+        float: left;
+        width: 57px;
+        height: 57px;
+        margin-right: 10px;
+        background: url(../images/logo-footer.png) no-repeat 50% 50%;
+    }
+    .footer-center{
+        float: left;
+        color: #b0b0b0;
+        .sites{
+            a{
+                color:#757575;
+            }          
+        }
+        p{
+            a{
+                color:#b0b0b0;
+            }
+            a:hover{
+                color:#ff6700;
+            }  
+        }
+        
+    }
+}
+.footer-link{
+    float: right;
+    height: 28px;
+    margin: 4px 0 0;  
+    img{
+        width: auto;
+        height: 28px;
+        margin-left: 0px;
+    }
+}
+//底部为发烧而生
+.slogan{
+    clear: both;
+    margin: 30px auto 0;
+    width: 267px;
+    height: 19px;
+    background: url(../images/slogan2016.png) no-repeat center 0;
+}

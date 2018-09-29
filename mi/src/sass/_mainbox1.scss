@@ -1,0 +1,92 @@
+@charset "utf-8";
+//左侧
+.main_bottom{
+    padding-bottom:26px;
+    margin-top: 14px;
+    margin-left: -14px;
+    .main_b_l{
+        width: 234px;
+        float: left;
+        margin-left: 14px;
+        min-height: 1px;
+        .main_b_list{
+            margin: 0;
+            padding: 3px;
+            list-style-type: none;
+            font-size: 12px;
+            text-align: center;
+            background: #5f5750;
+            li{
+                position: relative;
+                float: left;
+                width: 70px;
+                height: 82px;
+                padding: 0 3px;
+                &:before{
+                    top: -1px;
+                    left: 6px;
+                    width: 64px;
+                    height: 1px;
+                    position: absolute;
+                    content: "";
+                    background: #665e57;
+                }
+                &:after{
+                    top: 6px;
+                    left: 0;
+                    width: 1px;
+                    height: 70px;
+                    position: absolute;
+                    content: "";
+                    background: #665e57;
+                }
+                a{
+                    display: block;
+                    padding-top: 18px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    color: rgba(255,255,255,0.7);
+                    transition: color .2s;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+.main_b_list{
+    i{
+        display: block;
+        height: 24px;
+        margin-bottom: 4px;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+//右侧
+.main_b_r{
+    width: 978px;
+    float: left;
+    margin-left: 14px;
+    min-height: 1px;
+    .first{
+        margin-left: 0;
+    }
+    li{
+        float: left;
+        width: 316px;
+        height: 170px;
+        margin-left: 15px;
+        transition: box-shadow .2s linear;
+        a{
+            display: block;
+            height: 170px;
+            img{
+                width: 316px;
+                height: 170px;
+            }
+        }
+    }
+}
