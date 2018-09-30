@@ -632,23 +632,21 @@
 .phones {
   padding-top: 22px;
   background: #f5f5f5;
-}
-.phones .container {
-  height: 686px;
   margin-bottom: 8px;
 }
-.phones .container .box-hd {
+.phones .box-hd {
   position: relative;
   height: 58px;
 }
-.phones .container .box-hd .title {
+.phones .box-hd .title {
   margin: 0;
   font-size: 22px;
   font-weight: 200;
   line-height: 58px;
   color: #333;
+  text-align: left;
 }
-.phones .container .box-hd .more {
+.phones .box-hd .more {
   position: absolute;
   top: 0;
   right: 0;
@@ -740,6 +738,11 @@
   background: #fff;
   transition: all .2s linear;
 }
+.phones .box-bd-r .box-bd-rlist .phone-item:hover {
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
+}
 
 .phones .figure {
   width: 160px;
@@ -748,6 +751,61 @@
 }
 .phones .figure a {
   display: block;
+}
+.phones .title {
+  margin: 0 10px 2px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.phones .title a {
+  color: #333;
+}
+.phones .desc {
+  margin: 0 10px 10px;
+  height: 18px;
+  font-size: 12px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #b0b0b0;
+}
+.phones .price {
+  margin: 0 10px 14px;
+  text-align: center;
+  color: #ff6700;
+}
+.phones .price del {
+  color: #b0b0b0;
+}
+.phones .flag {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 64px;
+  height: 20px;
+  margin-left: -32px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+.phones .flag-new {
+  background-color: #83c44e;
+  z-index: 5;
+}
+.phones .flag-saleoff {
+  background-color: #e53935;
+}
+
+.phone_ad {
+  margin: 28px 0 22px;
+  height: 120px;
+}
+.phone_ad img {
+  width: 1226px;
 }
 
 .footer-service {
@@ -915,6 +973,53 @@ body {
 .clearfix:after {
   clear: both;
   /*清除浮动*/
+}
+
+#main {
+  background: #f5f5f5;
+}
+
+.row {
+  margin-left: -14px;
+}
+
+.box-hd {
+  position: relative;
+  height: 58px;
+}
+.box-hd .title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+  color: #333;
+}
+.box-hd .more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.box-hd .more .tab-list {
+  margin: 0;
+  padding: 16px 0 0;
+  list-style-type: none;
+  font-size: 16px;
+}
+.box-hd .more .tab-list .tab-active {
+  color: #ff6700;
+  border-bottom: 2px solid #ff6700;
+}
+.box-hd .more .tab-list li {
+  margin: 0 0 0 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.box-bd .box-bd-l {
+  width: 234px;
+  float: left;
+  margin-left: 14px;
+  min-height: 1px;
 }
 
 /*# sourceMappingURL=index.css.map */
