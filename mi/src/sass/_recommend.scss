@@ -1,0 +1,108 @@
+@charset "utf-8";
+.around{
+    margin-bottom:8px;
+}
+.recommend{
+    margin-bottom: 22px;
+    height: 358px;
+    .box-hd{
+        position: relative;
+        height: 58px;
+        .title{
+            margin: 0;
+            font-size: 22px;
+            font-weight: 200;
+            line-height: 58px;
+            color: #333;
+        }
+        .more{
+            top: 15px;
+            position: absolute;
+            right: 0;
+            .control{
+                margin-left: -5px;
+                width: 24px;
+                height: 16px;
+                padding: 3px 5px;
+                border: 1px solid #e0e0e0;
+                font-size: 16px;
+                line-height: 16px;
+                display: inline-block;
+                text-align: center;
+                transition: color .5s;
+                &:hover{
+                    color:#ff6700;
+                }
+            }
+            .control-prev{
+                color: #e0e0e0;
+                cursor: default;
+            }
+            .control-next{
+                color: #b0b0b0;
+            }
+        }
+    }
+}
+.rec-wrapper{
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    width: 1226px;
+    .rec-list{
+        width: 4960px;
+        margin-left: 0px;
+        transition: margin-left 0.5s ease 0s;
+        li{
+            transition: all 0.2s linear;
+            margin-right: 14px;
+            margin-bottom: 14px;
+            height: 300px;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+            float: left;
+            width: 234px;
+            dl{
+                margin: 1em 0;
+                padding: 0 20px;
+                margin-bottom: 0;
+                margin-top: 0;
+                list-style: none;
+            }
+            &:hover{
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                transform: translate3d(0, -2px, 0);
+            }
+        }
+    }
+}
+.rec-item{
+    dt{
+        padding: 40px 0 15px;
+        height: 145px;
+        margin-top: 0;
+        img{
+            width: 140px;
+            height: 140px;
+        }
+    }
+    .xm-recommend-name{
+        margin-bottom: 10px;
+        height: 18px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        a{
+            color: #333;
+        }
+    }
+    .xm-recommend-price {
+        margin-bottom: 10px;
+        color: #ff6700;
+    }
+    .xm-recommend-tips {
+        position: relative;
+        color: #757575;
+    }
+}
