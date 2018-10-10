@@ -1,8 +1,9 @@
 @charset "utf-8";
+
 .modal{
-    display: none;
+    display: block;
     position: fixed !important;
-    top: 50%;
+    top: -500px;
     left: 50%;
     z-index: 1050;
     margin-top: -300px;
@@ -78,6 +79,46 @@
                     color: #fff;
                 }
             }
+        }
+    }
+}
+.blackmu{
+    display: none;
+    width: 100%;
+    height:8744px;
+    position: fixed !important;
+    opacity: 0.5;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+//楼梯
+.stairs{
+    position: fixed;
+    left:30px;
+    bottom:120px;
+    z-index:999;
+    .stairs-list{
+        width: 48px;
+        li{
+            width: 48px;
+            height: 48px;
+            background: #b0b0b0;
+            border-bottom:1px solid #fff;
+            a{
+                font-size: 12px;
+                width: 48px;
+                display: block;
+                text-align: center;
+                line-height: 48px;
+                color:#fff;
+            }
+        }
+        .active{
+            background: #ff6700;
         }
     }
 }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的购物车-小米商城</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <!--头部-->
+    <div class="site-header">
+        <div class="container">
+            <div class="header-logo">
+                <a href="#" class="logo">
+                </a>
+            </div>
+            <div class="header-title">
+                <h2>我的购物车</h2>
+                <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+            </div>
+            <div class="topbar-info">
+                <span class="user">
+                    <a href="#" class="user-name">
+                        <span class="name">夜空划过流星</span>
+                        <i class="iconfont"></i>
+                    </a>
+                    <ul class="user-menu">
+                        <li><a href="">个人中心</a></li>
+                        <li><a href="">评价晒单</a></li>
+                        <li><a href="">我的喜欢</a></li>
+                        <li><a href="">小米账户</a></li>
+                        <li><a href="">退出登录</a></li>
+                    </ul>
+                </span>
+                <span class="sep">|</span>
+                <a href="#" class="link">我的订单</a>
+            </div>
+        </div>
+    </div>
+    <!--商品列表-->
+    <div class="main">
+        <div class="container">
+            <div class="cart-empty">
+                <h2>您的购物车还是空的!</h2>
+                <p class="login-desc">登录后将显示您之前加入的商品</p>
+                <a href="#" class="btn btn-primary btn-login">立即登录</a>
+                <a href="#" class="btn btn-shopping">马上去购物</a>
+            </div>
+            <div class="cartbox" style="display:none">
+                <div class="cart-goods-list">
+                    <div class="list-head clearfix">
+                        <div class="col col-check">
+                            <i class="iconfont icon-checkbox icon-checkbox-selected" id="J_selectAll">√</i>全选
+                        </div>
+                        <div class="col col-img">&nbsp;</div>
+                        <div class="col col-name">商品名称</div>
+                        <div class="col col-price">单价</div>
+                        <div class="col col-num">数量</div>
+                        <div class="col col-total">小计</div>
+                        <div class="col col-action">操作</div>
+                    </div>
+                    <div class="list-body">
+                        <div class="item-box">
+                            <div class="item-table">
+                                <div class="item-row">
+                                    <div class="col col-check">
+                                        <i class="iconfont icon-checkbox icon-checkbox-selected J_itemCheckbox" >√</i>
+                                    </div>
+                                    <div class="col col-img">
+                                        <a href="//item.mi.com/1175000272.html" target="_blank"> 
+                                            <img alt="" src="//i1.mifile.cn/a1/pms_1513822496.31335198!80x80.jpg" width="80" height="80"> 
+                                        </a>
+                                    </div>
+                                    <div class="col col-name">
+                                        <div class="tags"></div>
+                                        <div class="tags"></div>
+                                        <h3 class="name">
+                                            <a href="//item.mi.com/1175000272.html" target="_blank"> 米家电磁炉 </a>
+                                        </h3>
+                                    </div>
+                                    <div class="col col-price"> 289元 </div>
+                                    <div class="col col-num">
+                                        <div class="change-goods-num clearfix">
+                                            <a href="javascript:void(0)" class="J_minus"><i class="iconfont"></i></a>
+                                            <input type="text" value="1">
+                                            <a href="javascript:void(0)" class="J_plus"><i class="iconfont"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-total"> 289元 
+                                        <p class="pre-info">  </p> 
+                                    </div>
+                                    <div class="col col-action"> 
+                                        <a id="2175000298_0_buy" href="javascript:void(0);" title="删除" class="del J_delGoods">
+                                            <i class="iconfont"></i>
+                                        </a> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="raise-buy-box"></div>
+                <div class="cart-bar clearfix">
+                    <div class="section-left">
+                        <a href="#" class="back-shopping">继续购物</a>
+                        <span class="cart-total">共 
+                            <i id="J_cartTotalNum">1</i> 件商品，已选择 
+                            <i id="J_selTotalNum">1</i> 件
+                        </span>
+                    </div>
+                    <span class="total-price">
+                        合计：<em id="J_cartTotalPrice">289</em>元
+                    </span>
+                    <a href="#" class="btn btn-a btn btn-primary">去结算</a>
+                    <div class="no-select-tip" id="J_noSelectTip">
+                        请勾选需要结算的商品
+                        <i class="arrow arrow-a"></i>
+                        <i class="arrow arrow-b"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--导入底部-->
+    <div class="footercontent"></div>
+    <script src="script/thirdplugins/jquery.js" type="text/javascript"></script>
+	<script src="script/js/cart.js" type="text/javascript"></script>
+</body>
+</html>

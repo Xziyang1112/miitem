@@ -19,21 +19,85 @@
     <!--中间-->
     <div id="main">
         <div class="login-main">
-            <a href="#"></a>
-            <div class="wrapper">
-                <!--登陆栏-->
-                <div class="mainbox">
-                    <div class="head-tab">
-                        <a href="javascript:;" class="active">账号登陆</a>
-                        <span class="line"></span>
-                        <a href="javascript:;">扫码登陆</a>
+            <a href="#" class="main-link"></a>
+                <div class="wrapper">
+                    <!--登陆栏-->
+                    <div class="mainbox">
+                        <div class="head-tab">
+                            <a href="javascript:;" class="now zhanghao">账号登陆</a>
+                            <span class="line"></span>
+                            <a href="javascript:;" class="saoma">扫码登陆</a>
+                        </div>
+                        <div class="tab-bd1">
+                            <div class="login_area">
+                                <form onsubmit="return false;" method="POST">
+                                    <!--输入框-->
+                                    <div class="user">
+                                        <input type="text" placeholder="邮箱/手机号码/小米ID" class="username" name="username" id="username">
+                                        <input type="password" placeholder="密码" class="password" name="password" id="password">
+                                    </div>
+                                    
+                                    <!--错误信息-->
+                                    <div class="err_tip" style="display:none" id="error">
+                                            <div>
+                                                <em class="icon_error"></em>
+                                                <span class="error-con">用户名或密码错误</span>
+                                            </div>
+                                    </div>
+                                    <div class="dlbox">
+                                        <input type="submit" value="登录" class="btndl" id="btn"> 
+                                    </div>
+                                    
+                                    <div class="other_panel clearfix">
+                                        <div class="sms_link">
+                                            <span>
+                                            <a href="http://10.31.162.60/miitem/mi/src/registor.html" class="btnadpt btn_gray">手机短信登录/注册</a>
+                                            </span>
+                                        </div>
+                                        <div class="reverse">
+                                            <a href="#">立即注册</a>
+                                            <span>|</span>
+                                            <a href="#">忘记密码?</a>
+                                        </div>
+                                        <!--其他登陆方式-->
+                                        <div class="other_login_type">
+                                            <fieldset class="oth_type_tit">
+                                                <legend class="oth_type_txt">其他方式登录</legend>
+                                            </fieldset>
+                                            <div class="oth_type_links">
+                                                <a href="#" class="icontype btn_qq">
+                                                    <i class="smbgqq bg"></i>
+                                                </a>
+                                                <a href="#" class="icontype btn_xl">
+                                                    <i class="smbgxl bg"></i>
+                                                </a>
+                                                <a href="#" class="icontype btn_zfb">
+                                                    <i class="smbgzfb bg"></i>
+                                                </a>
+                                                <a href="#" class="icontype btn_wx">
+                                                    <i class="smbgwx bg"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-bd2">
+                            <div class="ercode">
+                                <div class="ercodebox"> 
+                                    <div class="code_hd">
+                                        <img src="images/ercode.png" alt="">
+                                    </div>
+                                    <div class="custom_sub_txt">
+                                        <p id="custom-qr-name">使用<span>小米商城APP</span>扫一扫</p>
+                                        <p>小米手机可打开「设置」&gt;「小米帐号」扫码登录</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-bd1" style="display:block">
-                        
-                    </div>
-                    <div class="tab-bd2" style="display:none"></div>
-                </div>
-            </div>
+                </div>  
         </div>
     </div>
     <!--底部-->
@@ -51,5 +115,9 @@
             <p>小米公司版权所有-京ICP备10046444-<a href="#"><span><img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png"></span>京公网安备11010802020134号</a>-京ICP证110507号</p>
         </div>
     </div>
+    <script src="script/thirdplugins/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/thirdplugins/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/thirdplugins/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/js/login.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

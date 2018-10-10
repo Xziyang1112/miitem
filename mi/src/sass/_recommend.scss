@@ -1,10 +1,27 @@
 @charset "utf-8";
+
 .around{
     margin-bottom:8px;
 }
 .recommend{
     margin-bottom: 22px;
     height: 358px;
+    .control{
+        margin-left: -5px;
+        width: 24px;
+        height: 16px;
+        padding: 3px 5px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        line-height: 16px;
+        display: inline-block;
+        text-align: center;
+        transition: color .5s;
+        color: #b0b0b0;
+        &:hover{
+            color:#ff6700;
+        }
+    }
     .box-hd{
         position: relative;
         height: 58px;
@@ -16,43 +33,31 @@
             color: #333;
         }
         .more{
-            top: 15px;
             position: absolute;
+            top: 15px;   
             right: 0;
-            .control{
-                margin-left: -5px;
-                width: 24px;
-                height: 16px;
-                padding: 3px 5px;
-                border: 1px solid #e0e0e0;
-                font-size: 16px;
-                line-height: 16px;
-                display: inline-block;
-                text-align: center;
-                transition: color .5s;
-                &:hover{
-                    color:#ff6700;
-                }
-            }
-            .control-prev{
-                color: #e0e0e0;
+            .control-disabled{
+                color:#e0e0e0;
                 cursor: default;
-            }
-            .control-next{
-                color: #b0b0b0;
-            }
+                &:hover{
+                    color:#e0e0e0;
+                }
+            }                   
         }
     }
 }
+
 .rec-wrapper{
     height: 320px;
     overflow: hidden;
     position: relative;
     width: 1226px;
     .rec-list{
-        width: 4960px;
-        margin-left: 0px;
-        transition: margin-left 0.5s ease 0s;
+        margin-left: -14px;
+        width:2480px;
+        position: absolute;
+        left: 0;
+        top:0;
         li{
             transition: all 0.2s linear;
             margin-right: 14px;

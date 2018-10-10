@@ -1,4 +1,15 @@
 @charset "UTF-8";
+@font-face {
+  font-family: iconfont;
+  src: url(http://10.31.162.60/miitem/mi/src/fonts/iconfont.eot?#iefix) format("embedded-opentype"), url(http://10.31.162.60/miitem/mi/src/fonts/iconfont.woff) format("woff"), url(http://10.31.162.60/miitem/mi/src/fonts/iconfont.ttf) format("truetype"), url(http://10.31.162.60/miitem/mi/src/fonts/iconfont.svg#uxiconfont) format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +21,10 @@ a {
 
 li {
   list-style: none;
+}
+
+fieldset {
+  border: 0;
 }
 
 .clearfix:after, .clearfix:before {
@@ -58,9 +73,166 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
 }
-.login-main a {
+.login-main .main-link {
   display: block;
   height: 588px;
+}
+
+.mainbox {
+  width: 410px;
+  min-height: 524px;
+  font-size: 14px;
+  z-index: 4;
+  background-color: #fff;
+  position: absolute;
+  right: 200px;
+  top: 32px;
+}
+.mainbox .head-tab {
+  padding: 27px 0 24px;
+  text-align: center;
+  font-size: 24px;
+  color: #e0e0e0;
+}
+.mainbox .head-tab a {
+  color: #666;
+}
+.mainbox .head-tab .now {
+  color: #f56600;
+}
+.mainbox .head-tab .line {
+  width: 1px;
+  height: 24px;
+  margin: 0 35px 0 42px;
+  border: 1px solid #e0e0e0;
+}
+.mainbox .tab-bd1 .login_area {
+  width: 348px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  position: relative;
+}
+.mainbox .tab-bd1 .login_area .user input {
+  width: 306px;
+  height: 22px;
+  line-height: 22px;
+  padding: 13px 16px 13px 14px;
+  display: block;
+  outline: none;
+  margin-top: 10px;
+  border: 1px solid #e0e0e0;
+}
+.mainbox .tab-bd1 .login_area .dlbox {
+  padding-top: 10px;
+}
+.mainbox .tab-bd1 .login_area .btndl {
+  margin-bottom: 14px;
+  background-color: #ef5b00;
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  line-height: 50px;
+  outline: none;
+  border: none;
+}
+.mainbox .tab-bd1 .login_area .other_panel {
+  margin-top: -5px;
+}
+.mainbox .tab-bd1 .login_area .other_panel .sms_link {
+  float: left;
+}
+.mainbox .tab-bd1 .login_area .other_panel .sms_link .btn_gray {
+  color: #ef5b00;
+  border: 0 none;
+  height: auto;
+  line-height: normal;
+  margin: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.mainbox .tab-bd1 .login_area .other_panel .reverse {
+  margin-top: 3px;
+  float: right;
+}
+.mainbox .tab-bd1 .login_area .other_panel .reverse a {
+  text-align: center;
+  color: #999;
+}
+.mainbox .tab-bd1 .login_area .other_panel .reverse a:hover {
+  color: #ff6700;
+}
+
+.other_login_type {
+  padding-top: 0;
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  text-align: center;
+}
+.other_login_type .oth_type_txt {
+  color: #bbb;
+}
+.other_login_type .oth_type_links {
+  padding-top: 3px;
+}
+.other_login_type .oth_type_links .bg {
+  display: block;
+  margin: 4px auto 0;
+  background: url(https://account.xiaomi.com/static/res/166d6dc/account-static/respassport/acc-2014/img/icons_type.png);
+  width: 18px;
+  height: 18px;
+}
+.other_login_type .oth_type_links .smbgqq {
+  background-position: -19px 0;
+}
+.other_login_type .oth_type_links .smbgxl {
+  background-position: -38px 0;
+}
+.other_login_type .oth_type_links .smbgzfb {
+  background-position: -57px 0;
+  width: 25px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+.other_login_type .oth_type_links .smbgwx {
+  background-position: -83px 0;
+  width: 24px;
+  margin-top: 6px;
+}
+.other_login_type .oth_type_links .icontype {
+  margin: 0 17px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.btn_qq {
+  background-color: #0288d1;
+}
+
+.btn_xl {
+  background-color: #d32f2f;
+}
+
+.btn_zfb {
+  background-color: #0ae;
+}
+
+.btn_wx {
+  background-color: #00d20d;
+}
+
+.oth_type_tit {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
 }
 
 #footer {
@@ -87,6 +259,56 @@ body {
 }
 #footer .footer-b p a {
   color: #757575;
+}
+
+.err_tip {
+  color: #f56600;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+.err_tip .icon_error {
+  background: url(https://account.xiaomi.com/static/res/f234829/account-static/respassport/acc-2014/img/sprite_login.gif) no-repeat;
+  background-position: 0 -69px;
+  width: 14px;
+  height: 14px;
+  margin: -1px 5px 0 0;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ercodebox {
+  width: 410px;
+  height: 442px;
+  position: relative;
+}
+.ercodebox .code_hd {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -90px;
+  margin-top: -110px;
+}
+.ercodebox .custom_sub_txt {
+  position: absolute;
+  top: 314px;
+  right: 55px;
+  font-size: 14px;
+  text-align: center;
+  color: #757575;
+}
+.ercodebox .custom_sub_txt p {
+  color: #757575;
+}
+.ercodebox .custom_sub_txt span {
+  padding: 0 5px;
+  color: #ff6700;
+}
+
+.tab-bd2 {
+  display: none;
 }
 
 /*# sourceMappingURL=login.css.map */

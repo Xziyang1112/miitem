@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+.video{
+    margin-bottom: 60px;
+    .more-link{
+        font-size: 16px;
+        line-height: 58px;
+        color: #424242;
+        transition: all .4s;
+        &:hover{
+            color: #ff6700;
+            .iconfont{
+                background: #ff6700;
+            }
+        }
+        .iconfont{
+            width: 12px;
+            height: 12px;
+            padding: 4px;
+            margin-left: 8px;
+            border-radius: 16px;
+            font-size: 12px;
+            line-height: 12px;
+            background: #b0b0b0;
+            color: #fff;
+            vertical-align: 1px;
+            transition: all .4s;
+        }
+    }
+}
+.video-list{
+    width: 1240px;
+    height: 285px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    .video-item-first{
+        margin-left: 0;
+    }
+}
+.video-item{
+    position: relative;
+    float: left;
+    width: 296px;
+    height: 285px;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    text-align: center;
+    background: #fff;
+    transition: all .2s linear;
+    &:hover{
+        z-index: 2;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        transform: translate3d(0, -2px, 0);
+    }
+    .figure-img{
+        position: relative;
+        width: 296px;
+        height: 180px;
+        margin: 0 0 28px;
+        &:hover{
+            .play{
+                background-color: #ff6700;
+                border-color: #ff6700;
+            }
+        }
+        a{
+            display: block;
+            height: 180px;
+        }
+        img{
+            width: 296px;
+            height: 180px;
+        }
+    }
+    .play{
+        position: absolute;
+        left: 20px;
+        bottom: 10px;
+        width: 32px;
+        height: 20px;
+        border: 2px solid #fff;
+        border-radius: 12px;
+        background-color: rgba(0,0,0,0.6);
+        color: #fff;
+        transition: all .2s;
+        overflow: hidden;
+        i{
+            font-size: 30px;
+            line-height: 20px;
+        }
+    }
+    .title{
+        margin: 0 0 6px;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        color: #333;
+        a{
+            color: #333;
+            &:hover{
+                color: #ff6700;
+            }
+        }
+    }
+    .desc{
+        height: 18px;
+        margin: 0;
+        font-size: 12px;
+        color: #b0b0b0;
+    }
+}

@@ -8,10 +8,6 @@
 	if(!$conn){
 		die('数据库链接失败:'.mysql_error());
 	}
-
-	mysql_select_db('wrong');
-	mysql_query('SET NAMES UTF8');
-
-	
-
+	mysql_select_db('mi');
+	mysql_query('SET NAMES UTF8');	
 ?>
