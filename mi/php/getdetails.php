@@ -1,6 +1,6 @@
 <?php  
     require "conn.php";
-    if(isset($_GET['sid'])){//前端ajax传输过来的额
+    if(isset($_GET['sid'])){//前端ajax传输过来的数据
         $sid=$_GET['sid'];
     }else{
         exit('非法操作');

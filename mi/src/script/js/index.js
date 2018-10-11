@@ -169,25 +169,25 @@
 			})
 		})
 		//登陆注册
-		if(getCookie('UserName')){
+		if (getCookie('UserName')) {
 			$('.top_right').hide();
 			$('.topbar-info').show().find('.name').html(getCookie('UserName'));
 		}
-		$('.topbar-info .userexit').on('click',function(){
-			delCookie('UserName','',-1);
+		$('.topbar-info .userexit').on('click', function () {
+			delCookie('UserName', '', -1);
 			$('.topbar-info').hide();
 			$('.top_right').show();
 		});
 
 
-		$('.topbar-info .user').hover(function(){
+		$('.topbar-info .user').hover(function () {
 			$('.topbar-info .user-menu').animate({
-				height:164
-			},300)
-		},function(){
+				height: 164
+			}, 300)
+		}, function () {
 			$('.topbar-info .user-menu').animate({
-				height:0
-			},300)
+				height: 0
+			}, 300)
 		})
 
 
@@ -212,14 +212,14 @@
 	})
 
 	//小米闪购
-	var $flrlist=$('.fl_bd_rlist');
+	var $flrlist = $('.fl_bd_rlist');
 	$.ajax({
 		url: 'http://10.31.162.60/miitem/mi/php/getdatahdp.php',
 		dataType: 'json'
 	}).done(function (data) {
 		var $flashstr = '';
 		$.each(data, function (index, value) {
-			$flashstr+=`<li class="rainbow-item${value.rainbow}">
+			$flashstr += `<li class="rainbow-item${value.rainbow}">
 		<a href="#" class="bga">
 			<div class="bg"></div>
 		</a>
@@ -234,7 +234,217 @@
 		});
 		$flrlist.html($flashstr);
 	})
-	 
+	//家电
+
+
+	$.ajax({
+		url: 'http://10.31.162.60/miitem/mi/php/getdatajiadian.php',
+		dataType: 'json'
+	}).done(function (data) {
+		var $homestr = '';
+		$.each(data, function (index, value) {
+			$homestr += `<ul class="box-bd-r-list clearfix">
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[0]}" alt="${value.title.split(',')[0]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[0]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[0]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[0]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[1]}" alt="${value.title.split(',')[1]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[1]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[1]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[1]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[2]}" alt="${value.title.split(',')[2]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[2]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[2]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[2]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[3]}" alt="${value.title.split(',')[3]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[3]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[3]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[3]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[4]}" alt="${value.title.split(',')[4]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[4]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[4]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[4]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[5]}" alt="${value.title.split(',')[5]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[5]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[5]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[5]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="box-bd-r-item">
+				<div class="figure figure-img">
+					<a href="#">
+						<img src="${value.url.split(',')[6]}" alt="${value.title.split(',')[6]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[6]}</a>
+				</h3>
+				<p class="desc">${value.description.split(',')[6]}</p>
+				<p class="price">
+					<span class="num">${value.price.split(',')[6]}</span>元
+					
+				</p>
+				<p class="rank"></p>
+				
+				<div class="review-wrapper"> 
+					<a href="//item.mi.com/1181600012.html" target="_blank"> 
+						<span class="review">尺寸正好，画质清晰，送货上门，非常满意</span>
+						<span class="author"> 来自于 大亨 的评价 
+							<span class="date"></span> 
+						</span> 
+					</a> 
+				</div>
+			</li>
+			<li class="brick-item-s">
+				<div class="figure figure-img">
+					<a href="">
+						<img src="${value.url.split(',')[7]}" alt="${value.title.split(',')[7]}">
+					</a>
+				</div>
+				<h3 class="title">
+					<a href="#">${value.title.split(',')[7]}</a>
+				</h3>
+				<p class="price"><span class="num">${value.price.split(',')[7]}</span>元</p>
+			</li>
+			<li class="brick-item-s">
+				<div class="figure figure-more">
+					<a href="#">
+						<i class="iconfont"></i>
+					</a>
+				</div>
+				<a href="#" class="more">
+					浏览更多
+					<small>热门</small>
+				</a>
+			</li>
+		</ul>`;
+		})
+		$('.home_ele #homeele-content').html($homestr);
+	})
 
 	//为你推荐
 	var $recList = $('.rec-list');
@@ -344,7 +554,7 @@
 	$louti.hide();
 	$(window).on('scroll', function () {
 		var $scrolltop = $(window).scrollTop();//获取滚动条的top值。
-		if ($scrolltop >=2390){
+		if ($scrolltop >= 2390) {
 			$louti.show();
 		} else {
 			$louti.hide();
@@ -357,43 +567,90 @@
 		$('html,body').animate({//赋值时考虑兼容。
 			scrollTop: $top
 		});
-	});	
+	});
 	//倒计时
-	var djs={};
-	var myDate=new Date();
+	var djs = {};
+	var myDate = new Date();
 	var year = myDate.getFullYear();//获取当前年
-    var yue = myDate.getMonth()+1;//获取当前月
-    var date = myDate.getDate();//获取当前日
-	var starttime = new Date(year,yue,date,18,00,00);
-	var time=starttime-myDate;
-		var hour = parseInt(time / 1000 / 60 / 60 % 24);
-		var minute = parseInt(time / 1000 / 60 % 60);
-		var seconds = parseInt(time / 1000 % 60);
-		if (hour <= 9) {hour = '0' + hour;}
-		if (minute <= 9) {minute = '0' + minute;}
-    	if (seconds <= 9) {second = '0' + seconds;}
-		$('.hourbox').html(hour);
-		$('.minutebox').html(minute);
-		$('.secondbox').html(seconds);
-  	djs.timer=setInterval(function () {
-    var nowtime = new Date();
-	var time = starttime - nowtime;
-	if(starttime - nowtime<=0){
-		clearInterval(djs.timer);
-	}else{
-		var hour = parseInt(time / 1000 / 60 / 60 % 24);
-		var minute = parseInt(time / 1000 / 60 % 60);
-		var seconds = parseInt(time / 1000 % 60);
-		if (hour <= 9) {hour = '0' + hour;}
-		if (minute <= 9) {minute = '0' + minute;}
-    	if (seconds <= 9) {second = '0' + seconds;}
-		$('.hourbox').html(hour);
-		$('.minutebox').html(minute);
-		$('.secondbox').html(seconds);
-	} 
-  }, 1000);
-  //详情页点击跳转
-  
+	var yue = myDate.getMonth() + 1;//获取当前月
+	var date = myDate.getDate();//获取当前日
+	var starttime = new Date(year, yue, date, 18, 00, 00);
+	var time = starttime - myDate;
+	var hour = parseInt(time / 1000 / 60 / 60 % 24);
+	var minute = parseInt(time / 1000 / 60 % 60);
+	var seconds = parseInt(time / 1000 % 60);
+	if (hour <= 9) { hour = '0' + hour; }
+	if (minute <= 9) { minute = '0' + minute; }
+	if (seconds <= 9) { second = '0' + seconds; }
+	$('.hourbox').html(hour);
+	$('.minutebox').html(minute);
+	$('.secondbox').html(seconds);
+	djs.timer = setInterval(function () {
+		var nowtime = new Date();
+		var time = starttime - nowtime;
+		if (starttime - nowtime <= 0) {
+			clearInterval(djs.timer);
+		} else {
+			var hour = parseInt(time / 1000 / 60 / 60 % 24);
+			var minute = parseInt(time / 1000 / 60 % 60);
+			var seconds = parseInt(time / 1000 % 60);
+			if (hour <= 9) { hour = '0' + hour; }
+			if (minute <= 9) { minute = '0' + minute; }
+			if (seconds <= 9) { second = '0' + seconds; }
+			$('.hourbox').html(hour);
+			$('.minutebox').html(minute);
+			$('.secondbox').html(seconds);
+		}
+	}, 1000);
+
+	//家电效果
+	$('.home_ele .tab-list li').hover(function () {
+		$(this).addClass('tab-active').siblings('li').removeClass('tab-active');
+		$('.home_ele .box-bd-r-list').eq($(this).index()).show().siblings('ul').hide();
+	})
+	//内容
+	contenttab($('.micontent-item-book .control-next'), $('.micontent-item-book .control-prev'));
+	contenttab($('.micontent-item-theme .control-next'), $('.micontent-item-theme .control-prev'));
+	contenttab($('.micontent-item-game .control-next'), $('.micontent-item-game .control-prev'));
+	contenttab($('.micontent-item-app .control-next'), $('.micontent-item-app .control-prev'));
+	function contenttab(minext, miprev){
+		var $contentnum = 0;
+		var $changdu=minext.parent().prevAll('.xm-pagers-wrapper').find('li').length;
+		var $width=minext.parent().prevAll('.xm-carousel-wrapper').find('li').width();
+		var $ul=minext.parent().prevAll('.xm-carousel-wrapper').find('ul');
+		$ul.width($changdu*$width);
+		minext.on('click', function () {
+			var $length = minext.parent().prevAll('.xm-pagers-wrapper').find('li').length;
+			var $li=minext.parent().prevAll('.xm-pagers-wrapper').find('li');
+			$contentnum++;
+			if ($contentnum >= $length - 1) {
+				$contentnum = $length - 1;
+			}
+			minext.parent().prevAll('.xm-carousel-wrapper').find('ul').animate({
+				left: -$contentnum * 296
+			},500)
+			$li.eq($contentnum).addClass('pager-active').siblings('li').removeClass('pager-active');
+		});
+		miprev.on('click', function () {
+			var $li=miprev.parent().prevAll('.xm-pagers-wrapper').find('li');
+			$contentnum--;
+			if ($contentnum <= 0) {
+				$contentnum = 0;
+			}
+			miprev.parent().prevAll('.xm-carousel-wrapper').find('ul').animate({
+				left: -$contentnum * 296
+			},500)
+			$li.eq($contentnum).addClass('pager-active').siblings('li').removeClass('pager-active');
+		});
+		var $pagerli=minext.parent().prevAll('.xm-pagers-wrapper').find('li');
+		$pagerli.on('click',function(){
+			$(this).addClass('pager-active').siblings('li').removeClass('pager-active');
+			$contentnum=$(this).index();
+			miprev.parent().prevAll('.xm-carousel-wrapper').find('ul').animate({
+				left: -$contentnum * 296
+			},500)
+		})
+	}
 }(jQuery);
 
 

@@ -24,10 +24,12 @@
             text-align: center;
         }
         .xm-carousel-wrapper{
+            position: relative;
             height: 340px;
             overflow: hidden;
             .item-list{
-                width: 888px;
+                position: absolute;
+                
                 margin-left: 0px;
                 transition: margin-left 0.5s ease 0s;
                 height: 340px;
