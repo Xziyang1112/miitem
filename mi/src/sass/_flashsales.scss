@@ -27,6 +27,16 @@
             display: inline-block;
             text-align: center;
             color:#b0b0b0;
+            &:hover{
+                color:#ff6700;
+            }
+        }
+        .control-disabled{
+            cursor: default;
+            color: #e0e0e0;
+            &:hover{
+                color: #e0e0e0;
+            }
         }
     }
 }
@@ -99,7 +109,11 @@
 .fl_box_bd_r{
     height: 340px;
     overflow: hidden;
+    position: relative;
     .fl_bd_rlist{
+        position: absolute;
+        left:0;
+        top:0;
         width: 1984px;
         margin-left: 0px;
         transition: margin-left 0.5s ease 0s;

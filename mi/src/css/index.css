@@ -11,9 +11,8 @@
 }
 
 .top_ad {
-  display: none;
   width: 100%;
-  background: url(//i1.mifile.cn/a4/cms_15380984394349_MPpBH.jpg) no-repeat center 0;
+  background: url(https://i1.mifile.cn/a4/cms_15392619375595_OtGhC.jpg) no-repeat center 0;
 }
 
 .top_ad a {
@@ -196,6 +195,7 @@
   position: relative;
 }
 .nav .navMenu {
+  width: 100%;
   display: block;
   height: 229px;
   padding-top: 0px;
@@ -208,7 +208,6 @@
   top: 100px;
   left: 0;
   z-index: 1000;
-  width: 100%;
   border-top: 1px solid #e0e0e0;
   background: #fff;
 }
@@ -331,7 +330,8 @@
 }
 
 .doodle .doodle_logo {
-  background-image: url(http://i8.mifile.cn/v1/a1/725c8ab6-34d8-b4c6-edab-ef174f5a7c54.webp);
+  opacity: 0;
+  background-image: url(http://i8.mifile.cn/v1/a1/b7acecd8-729b-dc3a-6a93-1eeb82cd0846.webp);
   position: absolute;
   left: 69px;
   bottom: 0;
@@ -761,6 +761,16 @@
   text-align: center;
   color: #b0b0b0;
 }
+.fl_box_hd .more .control:hover {
+  color: #ff6700;
+}
+.fl_box_hd .more .control-disabled {
+  cursor: default;
+  color: #e0e0e0;
+}
+.fl_box_hd .more .control-disabled:hover {
+  color: #e0e0e0;
+}
 
 .fl_box_bd {
   position: relative;
@@ -830,8 +840,12 @@
 .fl_box_bd_r {
   height: 340px;
   overflow: hidden;
+  position: relative;
 }
 .fl_box_bd_r .fl_bd_rlist {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 1984px;
   margin-left: 0px;
   transition: margin-left 0.5s ease 0s;

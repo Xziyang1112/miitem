@@ -184,6 +184,7 @@
   position: relative;
 }
 .nav .navMenu {
+  width: 100%;
   display: block;
   height: 229px;
   padding-top: 0px;
@@ -196,7 +197,6 @@
   top: 100px;
   left: 0;
   z-index: 1000;
-  width: 100%;
   border-top: 1px solid #e0e0e0;
   background: #fff;
 }
@@ -319,7 +319,8 @@
 }
 
 .doodle .doodle_logo {
-  background-image: url(http://i8.mifile.cn/v1/a1/725c8ab6-34d8-b4c6-edab-ef174f5a7c54.webp);
+  opacity: 0;
+  background-image: url(http://i8.mifile.cn/v1/a1/b7acecd8-729b-dc3a-6a93-1eeb82cd0846.webp);
   position: absolute;
   left: 69px;
   bottom: 0;

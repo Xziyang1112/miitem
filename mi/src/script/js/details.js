@@ -77,6 +77,7 @@
 	//加载尾部
 	$('.footercontent').load('footer.html');
 	//详情页
+	var $imgsid=0;
 	var $sid=location.search.substring(1);
 	if($sid=='sid=3'){
 		$('.goods-info-head-size').show();
@@ -88,6 +89,7 @@
 		url: 'http://10.31.162.60/miitem/mi/php/getdetails.php?'+$sid,
 		dataType: 'json'
 	}).done(function (data){
+		$imgsid=data.sid;
 		if(data.righturl){
 			$('.goods-info-head-colors').show();
 			var $righturl=data['righturl'].split(',');
@@ -105,7 +107,7 @@
 		$('.manyidu').html(data.agree+'%')//满意度
 		$.each($lefturl, function (index, value) {
 			if(index==0){
-				$leftstr+='<li class="current"><img src="'+value+'" alt=""></li>';
+				$leftstr+='<li class="current"><img src="'+value+'" alt="" sid="'+$imgsid+'"></li>';
 				$('.zoom-big-block .img').css({
 					"background-image":"url("+value+")"
 				});
@@ -285,6 +287,37 @@
 		//尺码效果
 		$('#J_goodsSize li').on('click',function(){
 			$(this).addClass('current').siblings('li').removeClass('current');
+		})
+		//购物车
+		var sidarr=[];
+		var numarr=[];
+		function getcookievalue(){
+			if(getCookie('cartsid')&&getCookie('cartnum')){
+				sidarr = getCookie('cartsid').split(',');
+				numarr = getCookie('cartnum').split(',');
+			}
+		}
+		$('.buy-wrap .btn').on('click',function(){
+			var sid=$imgsid;
+			getcookievalue();
+			if($.inArray(sid,sidarr)!=-1){
+				if(getCookie('cartnum')==''){
+					var num=1;
+					numarr[$.inArray(sid,sidarr)]=num;
+					addCookie('cartnum',numarr.toString(),7);
+					sidarr[$.inArray(sid,sidarr)]=sid;
+					addCookie('cartsid',sidarr.toString(),7);
+				}else{
+					var num=parseInt(numarr[$.inArray(sid,sidarr)])+1;
+					numarr[$.inArray(sid,sidarr)]=num;
+					addCookie('cartnum',numarr,10);
+				}
+			}else{
+				sidarr.push(sid);
+				addCookie('cartsid',sidarr,10);
+				numarr.push(1);
+				addCookie('cartnum',numarr,10);
+			}
 		})
 	})
 }(jQuery);

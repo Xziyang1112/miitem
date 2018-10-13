@@ -136,7 +136,13 @@
 			}, 100)
 			$blackmu.hide();
 		})
-
+		//doodle
+		setTimeout(function(){
+			$('.doodle_logo').animate({
+				opacity:1
+			},1000);
+		},1000)
+		
 		//小米手机
 		var $miphone = $('.miphone');
 		var $navMenuul = $('.navMenu .children-list');
@@ -154,14 +160,16 @@
 				}
 			});
 		})
-		$miphone.hover(function () {
-			$('.navMenu').animate({
+		$miphone.hover(function(){
+			$('.header-nav-menu').css('z-index','9999');
+			$('.navMenu').stop(true).animate({
 				height: 230
-			}, function () {
+				
+			}, function(){
 				$navMenuul.html($navMenuli);
 			})
 		}, function () {
-			$('.navMenu').animate({
+			$('.navMenu').stop(true).animate({
 				height: 0
 			}, function () {
 				$navMenuli2 = '';
@@ -554,7 +562,7 @@
 	$louti.hide();
 	$(window).on('scroll', function () {
 		var $scrolltop = $(window).scrollTop();//获取滚动条的top值。
-		if ($scrolltop >= 2390) {
+		if ($scrolltop >= 2260) {
 			$louti.show();
 		} else {
 			$louti.hide();
@@ -602,7 +610,28 @@
 			$('.secondbox').html(seconds);
 		}
 	}, 1000);
-
+	//小米闪购
+	var $flashnum=0
+	$('.fl_box_hd .more_right').on('click',function(){
+		$flashnum++;
+		if($flashnum>=1){
+			$flashnum=1;
+			$(this).addClass('control-disabled').siblings('a').removeClass('control-disabled');
+		}
+		$('.fl_bd_rlist').stop(true).animate({
+			left:-$flashnum*992
+		})
+	});
+	$('.fl_box_hd .more_left').on('click',function(){
+		$flashnum--;
+		if($flashnum<=0){
+			$flashnum=0;
+			$(this).addClass('control-disabled').siblings('a').removeClass('control-disabled');
+		}
+		$('.fl_bd_rlist').stop(true).animate({
+			left:-$flashnum*992
+		})
+	});
 	//家电效果
 	$('.home_ele .tab-list li').hover(function () {
 		$(this).addClass('tab-active').siblings('li').removeClass('tab-active');

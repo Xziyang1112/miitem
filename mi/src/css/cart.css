@@ -321,6 +321,7 @@ body {
 }
 .user .user-menu {
   display: none;
+  height: 0;
   position: absolute;
   left: 0;
   top: 40px;
@@ -381,10 +382,16 @@ body {
   cursor: pointer;
   margin-right: 15px;
 }
+.cart-goods-list .col-check .icon-checkbox:hover {
+  color: #757575;
+}
 .cart-goods-list .col-check .icon-checkbox-selected {
   color: #fff;
   border-color: #ff6700;
   background-color: #ff6700;
+}
+.cart-goods-list .col-check .icon-checkbox-selected:hover {
+  color: #fff;
 }
 .cart-goods-list .col-img {
   width: 120px;
@@ -401,6 +408,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 380px;
 }
 .cart-goods-list .col-name .name a {
   color: #424242;
@@ -567,6 +575,12 @@ body {
   border-color: #ff6700;
   color: #fff;
 }
+.cart-bar .btn-disabled {
+  background: #e0e0e0 !important;
+  border-color: #e0e0e0 !important;
+  color: #b0b0b0 !important;
+  cursor: default !important;
+}
 .cart-bar a {
   transition: color .3s;
 }
@@ -650,6 +664,103 @@ body {
   background-color: #f5f5f5;
   color: #ff6700;
   border-color: #ff6700;
+}
+
+.cart-recommend {
+  margin: 60px 0 0;
+}
+.cart-recommend .xm-recommend-title {
+  position: relative;
+  margin: 0;
+  height: 50px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #757575;
+  border-top: 1px solid #e0e0e0;
+}
+.cart-recommend .xm-recommend-title span {
+  position: absolute;
+  top: -20px;
+  left: 372px;
+  height: 40px;
+  width: 482px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  background-color: #f5f5f5;
+}
+.cart-recommend ul li {
+  margin-bottom: 14px;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  width: 234px;
+  float: left;
+  margin-left: 14px;
+  min-height: 1px;
+}
+.cart-recommend ul li:hover .btn {
+  display: block;
+}
+.cart-recommend dl {
+  padding: 0 20px;
+  margin-bottom: 0;
+}
+.cart-recommend dl dt {
+  padding: 40px 0 15px;
+  height: 145px;
+}
+.cart-recommend dl dt img {
+  width: 140px;
+  height: 140px;
+}
+.cart-recommend dl dd {
+  margin-left: 0;
+}
+
+.row {
+  margin-left: -14px;
+}
+
+.xm-recommend .xm-recommend-name {
+  margin-bottom: 10px;
+  height: 18px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.xm-recommend .xm-recommend-name a {
+  color: #333;
+}
+.xm-recommend .xm-recommend-price {
+  margin-bottom: 10px;
+  color: #ff6700;
+}
+.xm-recommend .xm-recommend-tips {
+  position: relative;
+  color: #757575;
+}
+.xm-recommend .xm-recommend-tips .btn {
+  display: none;
+  position: absolute;
+  left: 37px;
+  top: 0;
+  width: 120px;
+  background: #fff;
+  color: #ff6700;
+  height: 28px;
+  font-size: 12px;
+  line-height: 28px;
+  border: 1px solid #ff6700;
+  text-align: center;
+  cursor: pointer;
+  transition: all .4s;
+}
+.xm-recommend .xm-recommend-tips .btn:hover {
+  color: #fff;
+  background-color: #f25807;
+  border-color: #f25807;
 }
 
 /*# sourceMappingURL=cart.css.map */
